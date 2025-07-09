@@ -8,8 +8,16 @@ class MyTradingBot:
         self.logger = get_logger()
         self.client = Client(API_KEY, API_SECRET, testnet=True)
         self.client.FUTURES_URL = BASE_URL
+        self.client.FUTURES_API_URL = BASE_URL
+        self.client.FUTURES_TESTNET_URL = BASE_URL
         self.client.FUTURES_USE_SERVER_TIME = True
-
+        
+        try:
+            _ = self.client._request_futures_api("get", "time")
+            self.logger.info("Binance Futures Testnet time sync successful.")
+        except Exception as e:
+            self.logger.error(f"Time sync failed: {e}")
+    
     def place_order(self, symbol, side, quantity, order_type="MARKET", price=None, stop_price=None):
         try:
             order_type = order_type.upper()

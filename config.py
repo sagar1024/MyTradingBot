@@ -5,4 +5,6 @@ load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
+
+#BASE_URL = "https://testnet.binancefuture.com"
 BASE_URL = "https://testnet.binancefuture.com"
