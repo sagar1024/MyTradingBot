@@ -19,6 +19,7 @@ def main():
         stop_price = float(input("Enter stop price: ").strip())
 
     print("\nPlacing order...")
+    
     result = bot.place_order(
         symbol=symbol,
         side=side,
