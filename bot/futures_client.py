@@ -28,7 +28,7 @@ class BinanceFuturesREST:
         endpoint = "/fapi/v1/order"
         url = self.base_url + endpoint
         
-        #Converting STOP_LIMIT to STOP i.e Binance APIs expected type
+        #Converting STOP_LIMIT to STOP which is what Binance APIs expects
         binance_order_type = "STOP" if order_type == "STOP_LIMIT" else order_type
 
         data = {

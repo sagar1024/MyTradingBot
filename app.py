@@ -2,10 +2,10 @@ import streamlit as st
 from bot.core import MyTradingBot
 from datetime import datetime
 
-# Page Config
+#Page Config
 st.set_page_config(page_title="MyTradingBot", layout="centered")
 
-# Custom CSS
+#Custom CSS
 st.markdown(
     """
     <style>
@@ -32,25 +32,22 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Custom Header
+#Custom Header
 st.markdown('<div class="main-title">MyTradingBot - Binance Futures Testnet</div>', unsafe_allow_html=True)
 
-# Instantiate bot
 bot = MyTradingBot()
 
-# Initialize order type in session state
 if "order_type" not in st.session_state:
     st.session_state.order_type = "MARKET"
 
-# Select Order Type outside form (allows dynamic rerun)
 order_type = st.selectbox(
     "Order Type",
-    ["MARKET", "LIMIT", "STOP_LIMIT"],
-    index=["MARKET", "LIMIT", "STOP_LIMIT"].index(st.session_state.order_type),
-    key="order_type",  # Will update session_state.order_type
+    ["MARKET", "LIMIT", "STOP"],
+    index=["MARKET", "LIMIT", "STOP"].index(st.session_state.order_type),
+    key="order_type",
 )
 
-# Main form
+#Main form
 with st.form("order_form"):
     st.subheader("Place Order")
 
@@ -61,14 +58,14 @@ with st.form("order_form"):
     price = None
     stop_price = None
 
-    if st.session_state.order_type in ["LIMIT", "STOP_LIMIT"]:
+    if st.session_state.order_type in ["LIMIT", "STOP"]:
         price = st.number_input("Limit Price", min_value=0.01, step=0.1)
-    if st.session_state.order_type == "STOP_LIMIT":
+    if st.session_state.order_type == "STOP":
         stop_price = st.number_input("Stop Price", min_value=0.01, step=0.1)
 
     submit = st.form_submit_button("Submit Order")
 
-# Handle submission
+#Handling submission
 if submit:
     st.info("Sending order to Binance Futures Testnet...")
 
@@ -106,7 +103,7 @@ if submit:
         st.caption("Full raw response (for debugging):")
         st.json(result)
 
-# Footer
+#Footer
 st.markdown(
     f"""
     <div class="footer-text">
