@@ -64,18 +64,11 @@ API_SECRET = "your_binance_testnet_api_secret"
 BASE_URL = "https://testnet.binancefuture.com"
 ```
 
-### Make sure you generate keys from: https://testnet.binancefuture.com/en/futures/BTCUSDT → [API Management]
-
-### 5. Create Logs Directory (Optional)
-
-```
-bash
-mkdir logs
-```
+Make sure you generate keys from: https://testnet.binancefuture.com/en/futures/BTCUSDT → [API Management]
 
 This is used for logging if you enable it in your core.py or logging utility.
 
-### 6. Run the Bot
+### 5. Run the Bot
 
 CLI Mode
 
