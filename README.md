@@ -66,8 +66,6 @@ BASE_URL = "https://testnet.binancefuture.com"
 
 Make sure you generate keys from: https://testnet.binancefuture.com/en/futures/BTCUSDT → [API Management]
 
-This is used for logging if you enable it in your core.py or logging utility.
-
 ### 5. Run the Bot
 
 CLI Mode
