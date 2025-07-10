@@ -6,12 +6,12 @@ MyTradingBot is a lightweight cryptocurrency trading bot built for the **Binance
 
 ## Features
 
-- ✅ Place orders on Binance Futures Testnet
-- ✅ Supports MARKET, LIMIT, and STOP (stop-limit) orders
-- ✅ Two interfaces: Command Line Interface (CLI) and Streamlit Web App
-- ✅ Simple modular codebase
-- ✅ Live timestamp sync with Binance server
-- ✅ Debug-friendly responses and structured logging
+- Place orders on Binance Futures Testnet
+- Supports MARKET, LIMIT, and STOP (stop-limit) orders
+- Two interfaces: Command Line Interface (CLI) and Streamlit Web App
+- Simple modular codebase
+- Live timestamp sync with Binance server
+- Debug-friendly responses and structured logging
 
 ---
 
