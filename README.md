@@ -17,11 +17,10 @@ MyTradingBot is a lightweight cryptocurrency trading bot built for the **Binance
 
 ## Tech Stack
 
-- Python 3.9+
-- [Binance Futures Testnet REST API](https://testnet.binancefuture.com/fapi/v1)
-- Streamlit (for Web UI)
+- Python 3
+- Streamlit (for UI)
+- Binance Futures Testnet API
 - Requests (for HTTP)
-- HMAC/Hashlib (for signature generation)
 
 ---
 
