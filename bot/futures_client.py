@@ -27,6 +27,9 @@ class BinanceFuturesREST:
     def place_order(self, symbol, side, quantity, order_type="MARKET", price=None, stop_price=None):
         endpoint = "/fapi/v1/order"
         url = self.base_url + endpoint
+        
+        #Converting STOP_LIMIT to STOP i.e Binance APIs expected type
+        binance_order_type = "STOP" if order_type == "STOP_LIMIT" else order_type
 
         data = {
             "symbol": symbol,
@@ -37,7 +40,7 @@ class BinanceFuturesREST:
             "recvWindow": 10000
         }
 
-        if order_type in ["LIMIT", "STOP_LIMIT"]:
+        if order_type in ["LIMIT", "STOP"]:
             data["timeInForce"] = "GTC"
 
         if price:
