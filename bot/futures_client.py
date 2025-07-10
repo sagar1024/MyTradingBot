@@ -1,6 +1,5 @@
 import hmac
 import hashlib
-import time
 import requests
 from urllib.parse import urlencode
 from config import API_KEY, API_SECRET, BASE_URL
