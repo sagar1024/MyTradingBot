@@ -79,7 +79,7 @@ Web UI (Streamlit)
 
 ```
 bash
-streamlit run streamlit_app.py
+streamlit run app.py
 ```
 
 You're now ready to test trade on Binance Futures Testnet!
