@@ -11,7 +11,6 @@ MyTradingBot is a lightweight cryptocurrency trading bot built for the **Binance
 - Two interfaces: Command Line Interface (CLI) and Streamlit Web App
 - Simple modular codebase
 - Live timestamp sync with Binance server
-- Debug-friendly responses and structured logging
 
 ---
 
